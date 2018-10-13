@@ -51,7 +51,6 @@
     <Compile Include="Commands\GetAllConfiguration.cs" />
     <Compile Include="GetMasterConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\StringTools.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProductivityTools.PSMasterConfiguration.Application\ProductivityTools.PSMasterConfiguration.Application.csproj">
@@ -61,6 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PSMasterConfiguration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

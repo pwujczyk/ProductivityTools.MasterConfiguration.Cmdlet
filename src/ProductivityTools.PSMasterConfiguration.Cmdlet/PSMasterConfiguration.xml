@@ -1,0 +1,8 @@
+﻿<Configuration>
+  <Source Type="File"></Source>
+  <ApplicationConfiguration Name="PSMasterConfiguration">
+    <Key1 Category="Category1">Value11</Key1>
+    <Key2 Category="Category2">Value22</Key2>
+    <Key3 Category="Category3">Value33</Key3>
+  </ApplicationConfiguration>
+</Configuration>

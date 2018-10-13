@@ -26,7 +26,7 @@ namespace ProductivityTools.PSMasterConfiguration.Application.Objects
 
         public override string ToString()
         {
-            var s = $"${this.Key} ${this.Value}";
+            var s = $"[{this.Key}] {this.Value}";
 
             return s;
         }

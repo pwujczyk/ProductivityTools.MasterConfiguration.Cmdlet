@@ -11,6 +11,11 @@ namespace ProductivityTools.PSMasterConfiguration.Application
 {
     public class MasterConfiguration
     {
+        public MasterConfiguration()
+        {
+            MConfiguration.SetConfigurationFileName("PSMasterConfiguration.xml");
+        }
+
         public List<PSConfigItem> GetAllConfiguration(string category = null, string application = null, string file = null, string value = null, string key = null)
         {
             var r = MConfiguration.GetValues(category, application, file, value, key).Select(x => new PSConfigItem(x)).ToList() ;

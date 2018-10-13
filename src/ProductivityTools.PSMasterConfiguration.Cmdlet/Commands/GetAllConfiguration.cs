@@ -1,5 +1,4 @@
 ﻿using ProductivityTools.PSMasterConfiguration.Application;
-using ProductivityTools.PSMasterConfiguration.Cmldet.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +9,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 {
     public class GetAllConfiguration : PSCmdlet.PSCommandPT<GetMasterConfiguration>
     {
-        protected override bool Condition => StringTools.NotNullNorEmpty(
-            this.Cmdlet.Category, 
-            this.Cmdlet.Application, 
-            this.Cmdlet.File,
-            this.Cmdlet.Value, 
-            this.Cmdlet.Key);
+        protected override bool Condition => true;
 
         public GetAllConfiguration(GetMasterConfiguration getMasterConfiguration) : base(getMasterConfiguration) { }
 
