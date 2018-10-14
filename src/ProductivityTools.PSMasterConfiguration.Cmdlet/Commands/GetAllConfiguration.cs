@@ -25,9 +25,8 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
             foreach (var config in configuration)
             {
-                WriteOutput(config.ToString());
+                this.Cmdlet.WriteObject(config);
             }
-            Console.Write("Printed");
         }
     }
 }
