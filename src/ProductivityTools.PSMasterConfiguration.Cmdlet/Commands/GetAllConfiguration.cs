@@ -25,7 +25,14 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
             foreach (var config in configuration)
             {
-                this.Cmdlet.WriteObject(config);
+                if (this.Cmdlet.Object.IsPresent)
+                {
+                    this.Cmdlet.WriteObject(config);
+                }
+                else
+                {
+                    this.Cmdlet.WriteOutput(config.Value);
+                }
             }
         }
     }

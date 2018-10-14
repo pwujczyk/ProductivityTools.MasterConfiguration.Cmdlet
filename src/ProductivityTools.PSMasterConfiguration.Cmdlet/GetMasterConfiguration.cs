@@ -26,6 +26,10 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet
         [Parameter(HelpMessage = "It prints whole configuration", Position = 0)]
         public string Key { get; set; }
 
+
+        [Parameter(HelpMessage = "It prints whole configuration")]
+        public SwitchParameter Object { get; set; }
+
         public GetMasterConfiguration()
         {
 
