@@ -9,17 +9,32 @@ using System.Threading.Tasks;
 
 namespace ProductivityTools.PSMasterConfiguration.Application
 {
-    public class MasterConfiguration
+    public static class MasterConfiguration
     {
-        public MasterConfiguration()
-        {
-            MConfiguration.SetConfigurationFileName("PSMasterConfiguration.xml");
-        }
+        private static string ConfigurationFilePath;
 
-        public List<PSConfigItem> GetAllConfiguration(string category = null, string application = null, string file = null, string value = null, string key = null)
+        public static List<PSConfigItem> GetAllConfiguration(string category = null, string application = null, string file = null, string value = null, string key = null)
         {
+            //ReplaceCurrentConfigurationPath();
             var r = MConfiguration.GetValues(category, application, file, value, key).Select(x => new PSConfigItem(x)).ToList() ;
             return r;
+        }
+
+        //Powershell loads all modules to one app domain
+        private static void ReplaceCurrentConfigurationPath()
+        {
+            MConfiguration.SetConfigurationFileName(ConfigurationFilePath);
+        }
+        public static void SetConfigurationFile(string file)
+        {
+            ConfigurationFilePath = file;
+            ReplaceCurrentConfigurationPath();
+        }
+
+        public static void SetConfiguration(string key, string value, string application, string file, string category)
+        {
+            ReplaceCurrentConfigurationPath();
+            MConfiguration.SetValue(key, value, application, file, category);
         }
     }
 }
