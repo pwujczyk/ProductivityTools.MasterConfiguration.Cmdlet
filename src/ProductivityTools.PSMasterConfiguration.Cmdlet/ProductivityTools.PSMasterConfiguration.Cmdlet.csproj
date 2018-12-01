@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\Functions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GetMasterConfiguration\Commands\GetConfiguration.cs" />
     <Compile Include="GetMasterConfiguration\GetMasterConfiguration.cs" />

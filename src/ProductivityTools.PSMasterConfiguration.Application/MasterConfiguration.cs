@@ -13,10 +13,12 @@ namespace ProductivityTools.PSMasterConfiguration.Application
     {
         private static string ConfigurationFilePath;
 
+        private static MConfiguration MConfiguration = new MConfiguration();
+
         public static List<PSConfigItem> GetAllConfiguration(string category = null, string application = null, string file = null, string value = null, string key = null)
         {
             //ReplaceCurrentConfigurationPath();
-            var r = MConfiguration.GetValues(category, application, file, value, key).Select(x => new PSConfigItem(x)).ToList() ;
+            var r = MConfiguration.GetValues(application, category , value, key).Select(x => new PSConfigItem(x)).ToList() ;
             return r;
         }
 

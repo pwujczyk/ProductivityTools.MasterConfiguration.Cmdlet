@@ -1,4 +1,5 @@
 ﻿using ProductivityTools.PSMasterConfiguration.Application;
+using ProductivityTools.PSMasterConfiguration.Cmdlet.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,8 @@ namespace ProductivityTools.PSMasterConfiguration.Cmdlet.SetMasterConfiguration.
 
         protected override void Invoke()
         {
-            string application = this.Cmdlet.Application ?? "Powershell";
-            string file = this.Cmdlet.File ?? "Powershell";
+            string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
+            string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
             MasterConfiguration.SetConfiguration(this.Cmdlet.Key, this.Cmdlet.Value, application, file, this.Cmdlet.Category);
         }
     }
