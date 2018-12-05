@@ -9,7 +9,7 @@ Task("Default")
   .Does(() =>
 {
   Information("Hello World!");
- // DotNetBuild(solution);
+  DotNetBuild(solution);
   
   CopyDirectory(@"out\bin\Debug", "Module");
 });
