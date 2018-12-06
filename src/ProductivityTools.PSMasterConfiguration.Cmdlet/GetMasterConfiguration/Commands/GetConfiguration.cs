@@ -22,7 +22,6 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             var configuration= MasterConfiguration.GetAllConfiguration(
             this.Cmdlet.Category,
             application,
-            file,
             this.Cmdlet.Value,
             this.Cmdlet.Key);
 
