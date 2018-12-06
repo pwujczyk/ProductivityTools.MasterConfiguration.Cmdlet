@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProductivityTools.PSMasterConfiguration.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmdlet.Extensions
     {
         internal static string SetPowershellIfNotDefined(string s)
         {
-            string r = s ?? "Powershell";
+            string r = s ?? MasterConfiguration.ApplicationName;
             return r;
         }
     }

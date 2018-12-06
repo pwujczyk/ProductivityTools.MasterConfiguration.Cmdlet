@@ -1,36 +1,25 @@
 ﻿using ProductivityTools.MasterConfiguration;
-using ProductivityTools.MasterConfiguration.Exceptions;
-using ProductivityTools.MasterConfiguration.Models;
-using ProductivityTools.PSMasterConfiguration.Application.Exceptions;
 using ProductivityTools.PSMasterConfiguration.Application.Objects;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProductivityTools.PSMasterConfiguration.Application
 {
     public static class MasterConfiguration
     {
         private static string ConfigurationFilePath;
+        public const string ApplicationName = "PSMasterConfiguration";
 
         private static MConfiguration MConfiguration = new MConfiguration();
 
-        public static List<PSConfigItem> GetAllConfiguration(string category = null, 
-            string application = null, 
+        public static List<PSConfigItem> GetAllConfiguration(string category = null,
+            string application = null,
             string value = null,
             string key = null)
         {
-            try
-            {
-                var r = MConfiguration.GetValues(application, category, value, key).Select(x => new PSConfigItem(x)).ToList();
-                return r;
-            }
-            catch (ConfigurationFileNameNotSet)
-            {
-                throw new BaseConfigurationFileNotSet();
-            }
+            SetDefaultPowershellFileName();
+            var r = MConfiguration.GetValues(application, category, value, key).Select(x => new PSConfigItem(x)).ToList();
+            return r;
         }
 
         private static string CurrentDirectory
@@ -42,7 +31,7 @@ namespace ProductivityTools.PSMasterConfiguration.Application
                 return directoryName;
             }
         }
-        
+
         private static string PSConfigurationPath
         {
             get
@@ -73,7 +62,7 @@ namespace ProductivityTools.PSMasterConfiguration.Application
 
         public static void SetConfiguration(string key, string value, string application, string file, string category)
         {
-           // ReplaceCurrentConfigurationPath();
+            // ReplaceCurrentConfigurationPath();
             MConfiguration.SetValue(key, value, application, file, category);
         }
     }
