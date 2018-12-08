@@ -22,7 +22,6 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             var configuration= MasterConfiguration.GetAllConfiguration(
             this.Cmdlet.Category,
             application,
-            this.Cmdlet.Value,
             this.Cmdlet.Key);
 
             foreach (var config in configuration)
@@ -33,7 +32,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
                 }
                 else
                 {
-                    this.Cmdlet.WriteOutput(config.Value);
+                    this.Cmdlet.WriteObject(config.Value);
                 }
             }
         }
