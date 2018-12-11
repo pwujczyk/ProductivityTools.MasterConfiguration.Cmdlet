@@ -20,9 +20,9 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
 
             var configuration= MasterConfiguration.GetAllConfiguration(
-            this.Cmdlet.Category,
-            application,
-            this.Cmdlet.Key);
+            category: this.Cmdlet.Category,
+            application: application,
+            key: this.Cmdlet.Key);
 
             foreach (var config in configuration)
             {
