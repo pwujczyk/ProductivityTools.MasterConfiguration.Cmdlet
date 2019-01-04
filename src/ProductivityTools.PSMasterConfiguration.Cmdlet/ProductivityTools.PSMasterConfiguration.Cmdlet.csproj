@@ -51,6 +51,8 @@
     <Compile Include="Exceptions\BaseConfigurationFileNotSet.cs" />
     <Compile Include="Extensions\Functions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="GetMasterConfigurationBaseConfFile\Commands\GetBaseConfigurationFile.cs" />
+    <Compile Include="GetMasterConfigurationBaseConfFile\GetMasterConfigurationBaseConfigurationFile.cs" />
     <Compile Include="GetMasterConfiguration\Commands\GetConfiguration.cs" />
     <Compile Include="GetMasterConfiguration\GetMasterConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

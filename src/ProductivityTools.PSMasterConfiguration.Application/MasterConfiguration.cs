@@ -60,6 +60,11 @@ namespace ProductivityTools.PSMasterConfiguration.Application
             ReplaceCurrentConfigurationPath();
         }
 
+        public static string GetConfigurationFile()
+        {
+            return ConfigurationFilePath;
+        }
+
         public static void SetConfiguration(string key, string value, string application, string file, string category)
         {
             // ReplaceCurrentConfigurationPath();
