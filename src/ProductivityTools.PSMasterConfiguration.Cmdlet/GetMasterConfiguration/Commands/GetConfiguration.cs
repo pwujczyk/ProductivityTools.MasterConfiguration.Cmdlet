@@ -16,25 +16,35 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
         protected override void Invoke()
         {
-            string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
-            string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
+         //   string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
+           // string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
 
-            var configuration= MasterConfiguration.GetAllConfiguration(
+         
+            var configuration= MasterConfiguration.GetValues(
             category: this.Cmdlet.Category,
-            application: application,
+            application: this.Cmdlet.Application,
             key: this.Cmdlet.Key);
 
-            foreach (var config in configuration)
+            if (!string.IsNullOrEmpty(this.Cmdlet.Key) && this.Cmdlet.Object.IsPresent == false)
             {
-                if (this.Cmdlet.Object.IsPresent)
-                {
-                    this.Cmdlet.WriteObject(config);
-                }
-                else
-                {
-                    this.Cmdlet.WriteObject(config.Value);
-                }
+                this.Cmdlet.WriteObject(configuration.Select(x=>x.Value));
             }
+            else
+            {
+                this.Cmdlet.WriteObject(configuration);
+            }
+
+            //foreach (var config in configuration)
+            //{
+            //    if (this.Cmdlet.Object.IsPresent)
+            //    {
+            //        this.Cmdlet.WriteObject(config);
+            //    }
+            //    else
+            //    {
+            //        this.Cmdlet.WriteObject(config.Value);
+            //    }
+            //}
         }
     }
 }

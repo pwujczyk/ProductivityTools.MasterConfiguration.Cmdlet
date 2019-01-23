@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ProductivityTools.MasterConfiguration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ProductivityTools.MasterConfiguration.0.0.6\lib\v4.6.1\ProductivityTools.MasterConfiguration.dll</HintPath>
+      <HintPath>..\..\packages\ProductivityTools.MasterConfiguration.0.0.8\lib\v4.6.1\ProductivityTools.MasterConfiguration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,10 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Exceptions\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

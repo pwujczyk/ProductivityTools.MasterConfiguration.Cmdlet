@@ -12,7 +12,7 @@ namespace ProductivityTools.PSMasterConfiguration.Application
 
         private static MConfiguration MConfiguration = new MConfiguration();
 
-        public static List<PSConfigItem> GetAllConfiguration(string category = null,
+        public static List<PSConfigItem> GetValues(string category = null,
             string application = null,
             string value = null,
             string key = null)
