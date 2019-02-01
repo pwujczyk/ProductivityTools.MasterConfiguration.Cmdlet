@@ -27,7 +27,8 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
             if (!string.IsNullOrEmpty(this.Cmdlet.Key) && this.Cmdlet.Object.IsPresent == false)
             {
-                this.Cmdlet.WriteObject(configuration.Select(x=>x.Value));
+                string s = configuration.Select(x => x.Value).SingleOrDefault();
+                this.Cmdlet.WriteObject(s);
             }
             else
             {
