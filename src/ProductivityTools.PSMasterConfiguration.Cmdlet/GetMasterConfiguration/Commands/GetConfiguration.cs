@@ -1,4 +1,5 @@
 ﻿using ProductivityTools.PSMasterConfiguration.Application;
+using ProductivityTools.PSMasterConfiguration.Application.Objects;
 using ProductivityTools.PSMasterConfiguration.Cmdlet.Extensions;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,11 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
         protected override void Invoke()
         {
-         //   string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
-           // string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
+            //   string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
+            // string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
 
-         
-            var configuration= MasterConfiguration.GetValues(
+
+            List<PSConfigItem> configuration = MasterConfiguration.GetValues(
             category: this.Cmdlet.Category,
             application: this.Cmdlet.Application,
             key: this.Cmdlet.Key);
