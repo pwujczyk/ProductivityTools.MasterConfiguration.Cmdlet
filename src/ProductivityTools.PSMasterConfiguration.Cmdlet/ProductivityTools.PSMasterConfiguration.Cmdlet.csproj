@@ -34,12 +34,17 @@
     <Reference Include="Description, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Description.1.0.0\lib\Description.dll</HintPath>
     </Reference>
-    <Reference Include="ProductivityTools.PSCmdlet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ProductivityTools.PSCmdlet.0.0.6\lib\v4.6.1\ProductivityTools.PSCmdlet.dll</HintPath>
+    <Reference Include="ProductivityTools.DescriptionValue, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ProductivityTools.DescriptionValue.1.0.1\lib\netstandard2.0\ProductivityTools.DescriptionValue.dll</HintPath>
+    </Reference>
+    <Reference Include="ProductivityTools.PSCmdlet, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ProductivityTools.PSCmdlet.1.0.1\lib\netstandard2.0\ProductivityTools.PSCmdlet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PowerShellStandard.Library.5.1.0\lib\netstandard2.0\System.Management.Automation.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
