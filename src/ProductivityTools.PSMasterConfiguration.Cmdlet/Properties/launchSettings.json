@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ProductivityTools.PSMasterConfiguration.Cmdlet": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+      "commandLineArgs": "-noexit -command \"import-module d:\\GitHub\\ProductivityTools.PSMasterConfiguration\\src\\ProductivityTools.PSMasterConfiguration.Cmdlet\\bin\\Debug\\netstandard2.0\\ProductivityTools.PSMasterConfiguration.Cmdlet.dll\""
+    }
+  }
+}

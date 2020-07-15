@@ -15,6 +15,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
         protected override void Invoke()
         {
+            ProductivityTools.PSMasterConfiguration.Application.MasterConfiguration.GetValue("pawel");
             //string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
             //string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
 

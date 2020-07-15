@@ -8,7 +8,7 @@ namespace ProductivityTools.PSMasterConfiguration.Application
 {
     public static class MasterConfiguration
     {
-        public static void Config()
+        public static void GetValue(string value)
         {
             Console.WriteLine("Hello World!");
             string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
