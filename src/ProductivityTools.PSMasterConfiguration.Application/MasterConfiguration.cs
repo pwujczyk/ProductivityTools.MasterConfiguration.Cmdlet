@@ -1,5 +1,6 @@
-﻿using ProductivityTools.MasterConfiguration;
-using ProductivityTools.PSMasterConfiguration.Application.Objects;
+﻿using Microsoft.Extensions.Configuration;
+using ProductivityTools.MasterConfiguration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,63 +8,24 @@ namespace ProductivityTools.PSMasterConfiguration.Application
 {
     public static class MasterConfiguration
     {
-        private static string ConfigurationFilePath;
-        public const string ApplicationName = "PSMasterConfiguration";
-
-        private static MConfiguration MConfiguration = new MConfiguration();
-
-        public static List<PSConfigItem> GetAllConfiguration(string category = null,
-            string application = null,
-            string value = null,
-            string key = null)
+        public static void Config()
         {
-            SetDefaultPowershellFileName();
-            var r = MConfiguration.GetValues(application, category, value, key).Select(x => new PSConfigItem(x)).ToList();
-            return r;
-        }
+            Console.WriteLine("Hello World!");
+            string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
-        private static string CurrentDirectory
-        {
-            get
-            {
-                var assemblylocation = System.Reflection.Assembly.GetExecutingAssembly().Location;
-                var directoryName = System.IO.Path.GetDirectoryName(assemblylocation);
-                return directoryName;
-            }
-        }
+            if (String.IsNullOrWhiteSpace(environment))
+                throw new ArgumentNullException("Environment not found in ASPNETCORE_ENVIRONMENT");
 
-        private static string PSConfigurationPath
-        {
-            get
-            {
-                string r = string.Format($"{CurrentDirectory}/PSMasterConfiguration.xml");
-                return r;
-            }
-        }
+            Console.WriteLine("Environment: {0}", environment);
 
-        private static void SetDefaultPowershellFileName()
-        {
-            if (string.IsNullOrEmpty(MConfiguration.ConfigurationFileName))
-            {
-                MConfiguration.SetConfigurationFileName(PSConfigurationPath);
-            }
-        }
-
-        //Powershell loads all modules to one app domain
-        private static void ReplaceCurrentConfigurationPath()
-        {
-            MConfiguration.SetConfigurationFileName(ConfigurationFilePath);
-        }
-        public static void SetConfigurationFile(string file)
-        {
-            ConfigurationFilePath = file;
-            ReplaceCurrentConfigurationPath();
-        }
-
-        public static void SetConfiguration(string key, string value, string application, string file, string category)
-        {
-            // ReplaceCurrentConfigurationPath();
-            MConfiguration.SetValue(key, value, application, file, category);
+            var configuration = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{environment}.json", true, true)
+                .AddMasterConfiguration(true)
+                .Build();
+            var settings = configuration["Login"];
+          
+            Console.WriteLine(settings);
         }
     }
 }
