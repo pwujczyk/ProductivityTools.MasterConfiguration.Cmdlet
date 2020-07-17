@@ -15,8 +15,6 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
                 .Build();
             string setting = configuration[value];
             return setting;
-
-            // Console.WriteLine(settings);
         }
     }
 }
