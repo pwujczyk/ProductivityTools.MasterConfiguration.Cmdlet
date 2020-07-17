@@ -13,20 +13,8 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet
     [Description("Cmdlet receives configuration from configuration source")]
     public class GetMasterConfiguration : PSCmdlet.PSCmdletPT
     {
-        [Parameter(HelpMessage = "It prints configuration for given category")]
-        public string Category { get; set; }
-
-        [Parameter(HelpMessage = "It prints configuration for given application")]
-        public string Application { get; set; }
-
-        [Parameter(HelpMessage = "It prints configuration for given file")]
-        public string File { get; set; }
-
         [Parameter(HelpMessage = "It receives config value for given key", Position = 0)]
         public string Key { get; set; }
-
-        [Parameter(HelpMessage = "It prints configuration as objects")]
-        public SwitchParameter Object { get; set; }
 
         public GetMasterConfiguration()
         {

@@ -8,12 +8,13 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 {
     public static class MasterConfiguration
     {
-        public static void GetValue(string value)
+        public static string GetValue(string value)
         {
             var configuration = new ConfigurationBuilder()
                 .AddMasterConfiguration("ProductivityTools.PSMasterConfiguration.json", true)
                 .Build();
-            var settings = configuration["Login"];
+            string setting = configuration[value];
+            return setting;
 
             // Console.WriteLine(settings);
         }
