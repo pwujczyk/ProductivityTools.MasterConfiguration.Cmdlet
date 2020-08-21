@@ -1,15 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.PSMasterConfiguration.Application", "src\ProductivityTools.PSMasterConfiguration.Application\ProductivityTools.PSMasterConfiguration.Application.csproj", "{3A6D0F6D-65F1-42C9-AEC0-546B897E4010}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.PSMasterConfiguration.Cmdlet", "src\ProductivityTools.PSMasterConfiguration.Cmdlet\ProductivityTools.PSMasterConfiguration.Cmdlet.csproj", "{694EC4A5-781A-4DC1-91F1-7A5AFA1553EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.PSMasterConfiguration.Cmdlet", "src\ProductivityTools.PSMasterConfiguration.Cmdlet\ProductivityTools.PSMasterConfiguration.Cmdlet.csproj", "{694EC4A5-781A-4DC1-91F1-7A5AFA1553EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.PSMasterConfiguration.Tests", "src\ProductivityTools.PSMasterConfiguration.Tests\ProductivityTools.PSMasterConfiguration.Tests.csproj", "{ED903993-8211-4DBB-9019-16A3DE44E6AE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5497BDF-FAD8-4DD7-ABCD-922148A654F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3A6D0F6D-65F1-42C9-AEC0-546B897E4010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A6D0F6D-65F1-42C9-AEC0-546B897E4010}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A6D0F6D-65F1-42C9-AEC0-546B897E4010}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A6D0F6D-65F1-42C9-AEC0-546B897E4010}.Release|Any CPU.Build.0 = Release|Any CPU
 		{694EC4A5-781A-4DC1-91F1-7A5AFA1553EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{694EC4A5-781A-4DC1-91F1-7A5AFA1553EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{694EC4A5-781A-4DC1-91F1-7A5AFA1553EA}.Release|Any CPU.ActiveCfg = Release|Any CPU

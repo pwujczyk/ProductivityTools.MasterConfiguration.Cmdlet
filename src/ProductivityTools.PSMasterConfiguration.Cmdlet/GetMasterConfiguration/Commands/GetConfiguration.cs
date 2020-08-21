@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ﻿using ProductivityTools.PSMasterConfiguration.Application;
 using ProductivityTools.PSMasterConfiguration.Application.Objects;
 using ProductivityTools.PSMasterConfiguration.Cmdlet.Extensions;
+=======
+﻿using ProductivityTools.PSMasterConfiguration.Cmdlet.Extensions;
+>>>>>>> develop
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +21,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
         protected override void Invoke()
         {
+<<<<<<< HEAD
             //   string application = Functions.SetPowershellIfNotDefined(this.Cmdlet.Application);
             // string file = Functions.SetPowershellIfNotDefined(this.Cmdlet.File);
 
@@ -47,6 +52,11 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             //        this.Cmdlet.WriteObject(config.Value);
             //    }
             //}
+=======
+            var config=MasterConfiguration.GetValue(this.Cmdlet.Key);
+            this.Cmdlet.WriteOutput(config);
+            
+>>>>>>> develop
         }
     }
 }
