@@ -11,12 +11,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.6" />
+    <PackageReference Include="ProductivityTools.MasterConfiguration" Version="2.0.1" />
     <PackageReference Include="ProductivityTools.PSCmdlet" Version="1.0.1" />
     <PackageReference Include="System.Text.Json" Version="4.6.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration\ProductivityTools.MasterConfiguration.csproj" />
   </ItemGroup>
 
 </Project>
