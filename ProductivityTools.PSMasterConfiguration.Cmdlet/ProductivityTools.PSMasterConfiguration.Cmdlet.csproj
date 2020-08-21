@@ -4,6 +4,16 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ProductivityTools.PSMasterConfiguration.psd1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ProductivityTools.PSMasterConfiguration.psd1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
