@@ -15,9 +15,9 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
 
         protected override void Invoke()
         {
+            this.Cmdlet.WriteVerbose("Hello from GetPSMasterConfiguration");
             var config=MasterConfiguration.GetValue(this.Cmdlet.Key);
             this.Cmdlet.WriteOutput(config);
-            
         }
     }
 }
