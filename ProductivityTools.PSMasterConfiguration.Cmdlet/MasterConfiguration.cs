@@ -28,7 +28,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             return setting;
         }
 
-        public static List<IConfigurationSection> GetAllValues(string value)
+        public static List<IConfigurationSection> GetAllValues()
         {
             IEnumerable<IConfigurationSection> settings = Configuration.GetChildren();
             var result = settings.ToList();

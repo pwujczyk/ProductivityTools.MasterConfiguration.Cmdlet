@@ -16,13 +16,17 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet
     {
         [Parameter(HelpMessage = "It receives config value for given key", Position = 0)]
         public string Key { get; set; }
-        
+
         [Parameter(HelpMessage = "It will print whole configuration in the ProductivityTools.PSMasterConfiguration.json")]
         public SwitchParameter All { get; set; }
 
-        public GetMasterConfiguration()
+        public GetMasterConfiguration() { }
+
+        protected override void BeginProcessing()
         {
             this.AddCommand(new GetConfiguration(this));
+            this.AddCommand(new GetAllConfiguration(this));
+            base.BeginProcessing();
         }
 
         protected override void ProcessRecord()
