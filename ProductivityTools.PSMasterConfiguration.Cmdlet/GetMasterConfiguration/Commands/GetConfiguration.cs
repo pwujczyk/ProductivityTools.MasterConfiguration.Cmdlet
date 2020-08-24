@@ -19,7 +19,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             this.Cmdlet.WriteVerbose($"Getting value from configuration using key {this.Cmdlet.Key}");
             var config=MasterConfiguration.GetValue(this.Cmdlet.Key);
             this.Cmdlet.WriteVerbose($"Value returned from MasterConfiguration {config}");
-            this.Cmdlet.WriteOutput(config);
+            this.Cmdlet.WriteObject(config);
         }
     }
 }
