@@ -1,4 +1,5 @@
-﻿using ProductivityTools.PSMasterConfiguration.Cmldet.Commands;
+﻿using ProductivityTools.PSMasterConfiguration.Cmdlet;
+using ProductivityTools.PSMasterConfiguration.Cmldet.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,9 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet
     {
         [Parameter(HelpMessage = "It receives config value for given key", Position = 0)]
         public string Key { get; set; }
+        
+        [Parameter(HelpMessage = "It will print whole configuration in the ProductivityTools.PSMasterConfiguration.json")]
+        public SwitchParameter All { get; set; }
 
         public GetMasterConfiguration()
         {
