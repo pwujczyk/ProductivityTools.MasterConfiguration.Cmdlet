@@ -16,11 +16,11 @@ Module allows to store configuration in one single file.
 
 To use it you need to have setup environment variable **MasterConfigurationPath** to the directory where you would like to store configuration.
 
-![Environment Variable](Images\MasterConfigurationEnvironmentVariable.png)
+![Environment Variable](Images/MasterConfigurationEnvironmentVariable.png)
 
 In given directory you need to have json configuration file
 
-![Configuration file](Images\MasterConfigurationFile.png)
+![Configuration file](Images/MasterConfigurationFile.png)
 
 Configuration should be in simple json format with configuration in key-value pair.
 
@@ -34,11 +34,11 @@ Configuration should be in simple json format with configuration in key-value pa
 
 To use the module call ```Get-MasterConfiguration``` with key.
 
-![GetMasterConfiguration](Images\GetMaterConfigurationLogin.png)
+![GetMasterConfiguration](Images/GetMaterConfigurationLogin.png)
 
 If you would like to see all config values, use ```-All``` switch.
 
-![GetMasterConfiguration](Images\GetMaterConfigurationAll.png)
+![GetMasterConfiguration](Images/GetMaterConfigurationAll.png)
 
 
 
