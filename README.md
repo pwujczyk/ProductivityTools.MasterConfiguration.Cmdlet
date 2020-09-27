@@ -1,8 +1,8 @@
 <!--Category:Powershell--> 
  <p align="right">
-    <a href="https://www.powershellgallery.com/packages/ProductivityTools.PSDbUp/"><img src="Images/Header/Powershell_border_40px.png" /></a>
-    <a href="http://productivitytools.tech/psdbup/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
-    <a href="https://github.com/pwujczyk/ProductivityTools.PSDbUp"><img src="Images/Header/Github_border_40px.png" /></a>
+    <a href="https://www.powershellgallery.com/packages/ProductivityTools.PSMasterConfiguration/"><img src="Images/Header/Powershell_border_40px.png" /></a>
+    <a href="http://productivitytools.tech/powershell-master-configuration/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
+    <a href="https://github.com/pwujczyk/ProductivityTools.PSMasterConfiguration"><img src="Images/Header/Github_border_40px.png" /></a>
 </p>
 <p align="center">
     <a href="http://productivitytools.tech/">
@@ -42,5 +42,5 @@ If you would like to see all config values, use ```-All``` switch.
 
 
 
-Module is based on [MasterConfiguration](https://www.nuget.org/packages/ProductivityTools.MasterConfiguration/) NuGet package.
+Module is based on [MasterConfiguration](https://www.nuget.org/packages/ProductivityTools.MasterConfiguration/) NuGet package. For .NET application it is also needed to setup additional Environment Variable ```ASPNETCORE_ENVIRONMENT``` but in **PowerSher Master Configration** this parameter is not mandatory as module force to use MasterConfiguration.
 
