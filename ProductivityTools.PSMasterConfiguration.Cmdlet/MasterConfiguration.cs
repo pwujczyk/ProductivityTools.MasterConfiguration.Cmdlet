@@ -14,7 +14,6 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
         {
             get
             {
-                
                 var configuration = new ConfigurationBuilder()
                     .AddMasterConfiguration(Consts.PsMasterConfigurationFileName, true)
                     .Build();
