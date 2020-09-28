@@ -17,7 +17,11 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
         {
             this.Cmdlet.WriteVerbose("Hello from GetPSMasterConfiguration");
             this.Cmdlet.WriteVerbose($"Getting value from configuration using key {this.Cmdlet.Key}");
-            var config=MasterConfiguration.GetValue(this.Cmdlet.Key);
+            var config = MasterConfiguration.GetValue(this.Cmdlet.Key);
+            if (string.IsNullOrEmpty(config) && this.Cmdlet.Silent.IsPresent == false)
+            {
+                throw new Exception($"Missing configuration item with the key {this.Cmdlet.Key}");
+            }
             this.Cmdlet.WriteVerbose($"Value returned from MasterConfiguration {config}");
             this.Cmdlet.WriteObject(config);
         }

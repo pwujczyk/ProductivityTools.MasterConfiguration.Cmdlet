@@ -7,9 +7,9 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
     public class GetAllConfiguration : PSCmdlet.PSCommandPT<GetMasterConfiguration>
     {
         public GetAllConfiguration(GetMasterConfiguration cmdletType) : base(cmdletType) { }
-        
 
-        protected override bool Condition => this.Cmdlet.All.IsPresent;
+
+        protected override bool Condition => this.Cmdlet.All.IsPresent || string.IsNullOrEmpty(this.Cmdlet.Key);
 
         protected override void Invoke()
         {

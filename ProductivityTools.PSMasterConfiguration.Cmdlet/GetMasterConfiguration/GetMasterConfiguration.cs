@@ -20,6 +20,9 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet
         [Parameter(HelpMessage = "It will print whole configuration in the ProductivityTools.PSMasterConfiguration.json")]
         public SwitchParameter All { get; set; }
 
+        [Parameter(HelpMessage = "It doesn't throw exception if key doesn't exist. It returns null")]
+        public SwitchParameter Silent{ get; set; }
+
         public GetMasterConfiguration() { }
 
         protected override void BeginProcessing()
