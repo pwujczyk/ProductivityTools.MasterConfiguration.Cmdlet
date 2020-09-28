@@ -15,7 +15,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             get
             {
                 var configuration = new ConfigurationBuilder()
-                    .AddMasterConfiguration(Consts.PsMasterConfigurationFileName, true)
+                    .AddMasterConfiguration("ProductivityTools.PSMasterConfiguration.json", true)
                     .Build();
                 return configuration;
             }

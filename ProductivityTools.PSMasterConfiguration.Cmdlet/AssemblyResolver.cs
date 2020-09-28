@@ -41,7 +41,8 @@ namespace ProductivityTools.PSMasterConfiguration.Cmdlet
             "Microsoft.Extensions.Configuration",
             "System.Buffers",
             "System.Runtime.CompilerServices.Unsafe",
-            "System.Numerics.Vectors"
+            "System.Numerics.Vectors",
+            "System.Text.Json"
         };
 
         public static Assembly ResolveExtenionAbstraction(object sender, ResolveEventArgs args)

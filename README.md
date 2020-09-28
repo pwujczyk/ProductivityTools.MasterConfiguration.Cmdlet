@@ -36,11 +36,24 @@ To use the module call ```Get-MasterConfiguration``` with key.
 
 ![GetMasterConfiguration](Images/GetMaterConfigurationLogin.png)
 
-If you would like to see all config values, use ```-All``` switch.
+If you would like to see all config values, use ```-All``` switch. The same effect you will 
 
 ![GetMasterConfiguration](Images/GetMaterConfigurationAll.png)
 
 
 
 Module is based on [MasterConfiguration](https://www.nuget.org/packages/ProductivityTools.MasterConfiguration/) NuGet package. For .NET application it is also needed to setup additional Environment Variable ```ASPNETCORE_ENVIRONMENT``` but in **PowerSher Master Configration** this parameter is not mandatory as module force to use MasterConfiguration.
+
+# Set-MasterConfiguration
+Module exposes cmdlet which allows to setup directory and file for configuration. Invoking ```Set-MasterConfiguration``` will:
+
+- Create **ProductivityTools.MasterConfiguration** directory in the Documents of the current user, or in the path provided to cmdlet
+- Create file **ProductivityTools.PSMasterConfiguration.json** in this directory if not exists
+- Set environment variables for a **Process** and for **Machine** with the key **MasterConfigurationPath** which will target directory described above
+
+### Refresh the PowerShell session
+I setup two environment variables because of setting up Environment Variables in PowerShell. 
+ - When first instance of PowerShell instance is invoked, it creates list of Environment Variables and keep them as Process. Restarting PowerShell doesn't refresh the variables.
+ - If module would setup only the **Machine** variable you will need to restart computer to make changes working.
+ - If module would setup only the **Process** variable after next restart variable would be cleared out.
 
