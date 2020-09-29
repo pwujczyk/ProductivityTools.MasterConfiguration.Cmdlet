@@ -14,6 +14,8 @@
 
 The module allows to store configuration for the PowerShell in one single file.
 
+<!--more-->
+
 To use it you need to have set up an environment variable **MasterConfigurationPath** to the directory where you would like to store a configuration.
 
 ![Environment Variable](Images/MasterConfigurationEnvironmentVariable.png)
@@ -49,7 +51,7 @@ To use the module call ```Get-MasterConfiguration``` with key.
 ![GetMasterConfiguration](Images/GetMaterConfigurationLogin.png)
 
 If you would like to see all config values, use ```-All``` switch. The same effect you will achieve without any parameter. 
-
+<!--og-image-->
 ![GetMasterConfiguration](Images/GetMaterConfigurationAll.png)
 
 
@@ -59,7 +61,7 @@ Module is based on [MasterConfiguration](https://www.nuget.org/packages/Producti
 
 
 ### Refresh the PowerShell session
-I set up two environment variables because of setting up Environment Variables in PowerShell. 
+If you would open the code, during Set-MasterConfiguration I set up two environment variables for Machine and for Process. This is a consequence of a way how PowerShell managing Environment Variables:
  - When the first instance of PowerShell instance is invoked, it creates list of Environment Variables and keeps them as Process. Restarting PowerShell doesn't refresh the variables.
  - If the module would setup only the **Machine** variable you will need to restart computer to make changes working.
  - If the module would setup only the **Process** variable after next restart variable would be cleared out.
