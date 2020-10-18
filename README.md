@@ -63,6 +63,8 @@ Module is based on [MasterConfiguration](https://www.nuget.org/packages/Producti
 ### Refresh the PowerShell session
 If you would open the code, during Set-MasterConfiguration I set up two environment variables for Machine and for Process. This is a consequence of a way how PowerShell managing Environment Variables:
  - When the first instance of PowerShell instance is invoked, it creates list of Environment Variables and keeps them as Process. Restarting PowerShell doesn't refresh the variables.
+
  - If the module would setup only the **Machine** variable you will need to restart computer to make changes working.
+ 
  - If the module would setup only the **Process** variable after next restart variable would be cleared out.
 

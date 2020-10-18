@@ -38,6 +38,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmdlet
         {
             "Microsoft.Extensions.Primitives",
             "Microsoft.Extensions.Configuration.Abstractions",
+            "Microsoft.Extensions.FileProviders.Abstractions",
             "Microsoft.Extensions.Configuration",
             "System.Buffers",
             "System.Runtime.CompilerServices.Unsafe",
