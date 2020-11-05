@@ -46,6 +46,9 @@ namespace ProductivityTools.PSMasterConfiguration.Cmdlet.InitMasterConfiguration
             WriteVerbose($"Setting up Environment Variable {envName} with value {this.Directory}");
             Environment.SetEnvironmentVariable(envName, this.Directory, EnvironmentVariableTarget.Machine);
             Environment.SetEnvironmentVariable(envName, this.Directory, EnvironmentVariableTarget.Process);
+
+            Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "MasterConfiguration", EnvironmentVariableTarget.Machine);
+            Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "MasterConfiguration", EnvironmentVariableTarget.Process);
             base.ProcessCommands();
         }
     }
