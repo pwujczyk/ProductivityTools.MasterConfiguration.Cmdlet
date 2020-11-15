@@ -4,7 +4,7 @@ using System.IO;
 using System.Management.Automation;
 using System.Reflection;
 
-namespace ProductivityTools.PSMasterConfiguration.Cmdlet
+namespace ProductivityTools.MasterConfiguration.Cmdlet
 {
     public class MyModuleInitializer : IModuleAssemblyInitializer
     {

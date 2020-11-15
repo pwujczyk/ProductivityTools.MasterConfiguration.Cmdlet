@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductivityTools.PSMasterConfiguration.Cmdlet.Extensions
+namespace ProductivityTools.MasterConfiguration.Cmdlet.Extensions
 {
     public static class StringExtensions
     {

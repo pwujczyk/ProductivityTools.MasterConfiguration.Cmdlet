@@ -6,7 +6,7 @@ using System.Management.Automation;
 using System.Text;
 using System.Text.Json;
 
-namespace ProductivityTools.PSMasterConfiguration.Cmdlet.InitMasterConfiguration
+namespace ProductivityTools.MasterConfiguration.Cmdlet.InitMasterConfiguration
 {
 
     [Cmdlet(VerbsCommon.Set, "MasterConfiguration")]

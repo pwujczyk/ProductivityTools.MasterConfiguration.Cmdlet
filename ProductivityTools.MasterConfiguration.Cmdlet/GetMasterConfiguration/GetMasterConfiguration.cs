@@ -1,5 +1,5 @@
-﻿using ProductivityTools.PSMasterConfiguration.Cmdlet;
-using ProductivityTools.PSMasterConfiguration.Cmldet.Commands;
+﻿using ProductivityTools.MasterConfiguration.Cmdlet;
+using ProductivityTools.MasterConfiguration.Cmldet.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Management.Automation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductivityTools.PSMasterConfiguration.Cmldet
+namespace ProductivityTools.MasterConfiguration.Cmldet
 {
     [Cmdlet(VerbsCommon.Get, "MasterConfiguration")]
     [Description("Cmdlet receives configuration from configuration source")]
@@ -17,7 +17,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet
         [Parameter(HelpMessage = "It receives config value for given key", Position = 0)]
         public string Key { get; set; }
 
-        [Parameter(HelpMessage = "It will print whole configuration in the ProductivityTools.PSMasterConfiguration.json")]
+        [Parameter(HelpMessage = "It will print whole configuration in the ProductivityTools.MasterConfiguration.json")]
         public SwitchParameter All { get; set; }
 
         [Parameter(HelpMessage = "It doesn't throw exception if key doesn't exist. It returns null")]

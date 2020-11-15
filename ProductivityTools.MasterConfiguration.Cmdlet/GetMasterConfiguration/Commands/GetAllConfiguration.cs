@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
+namespace ProductivityTools.MasterConfiguration.Cmldet.Commands
 {
     public class GetAllConfiguration : PSCmdlet.PSCommandPT<GetMasterConfiguration>
     {

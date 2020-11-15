@@ -1,12 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using ProductivityTools.MasterConfiguration;
-using ProductivityTools.PSMasterConfiguration.Cmdlet;
+using ProductivityTools.MasterConfiguration.Cmdlet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
+namespace ProductivityTools.MasterConfiguration.Cmldet.Commands
 {
     public static class MasterConfiguration
     {
@@ -15,7 +15,7 @@ namespace ProductivityTools.PSMasterConfiguration.Cmldet.Commands
             get
             {
                 var configuration = new ConfigurationBuilder()
-                    .AddMasterConfiguration("ProductivityTools.PSMasterConfiguration.json", true)
+                    .AddMasterConfiguration("ProductivityTools.MasterConfiguration.json", true)
                     .Build();
                 return configuration;
             }

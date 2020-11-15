@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "ProductivityTools.PSMasterConfiguration.Cmdlet": {
-      "commandName": "Executable",
-      "executablePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-      "commandLineArgs": "-noexit -command \"import-module D:\\GitHub-3.PublishedToLinkedIn\\ProductivityTools.PSMasterConfiguration\\ProductivityTools.PSMasterConfiguration.Cmdlet\\bin\\Debug\\netstandard2.0\\ProductivityTools.PSMasterConfiguration.Cmdlet.dll\""
-    }
-  }
-}

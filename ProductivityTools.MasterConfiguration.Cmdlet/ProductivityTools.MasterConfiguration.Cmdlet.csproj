@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ProductivityTools.PSMasterConfiguration.psd1" />
+    <None Remove="ProductivityTools.MasterConfiguration.psd1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="ProductivityTools.PSMasterConfiguration.psd1">
+    <Content Include="ProductivityTools.MasterConfiguration.psd1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
