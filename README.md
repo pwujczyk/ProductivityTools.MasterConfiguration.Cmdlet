@@ -1,18 +1,18 @@
 <!--Category:Powershell--> 
  <p align="right">
     <a href="https://www.powershellgallery.com/packages/ProductivityTools.PSMasterConfiguration/"><img src="Images/Header/Powershell_border_40px.png" /></a>
-    <a href="http://productivitytools.tech/powershell-master-configuration/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
+    <a href="http://productivitytools.top/powershell-master-configuration/"><img src="Images/Header/ProductivityTools_green_40px_2.png" /><a> 
     <a href="https://github.com/pwujczyk/ProductivityTools.PSMasterConfiguration"><img src="Images/Header/Github_border_40px.png" /></a>
 </p>
 <p align="center">
-    <a href="http://productivitytools.tech/">
+    <a href="http://productivitytools.top/">
         <img src="Images/Header/LogoTitle_green_500px.png" />
     </a>
 </p>
 
 # PowerShell Master Configuration
 
-The module allows to store configuration for the PowerShell in one single file.
+The1 module allows to store configuration for the PowerShell in one single file.
 
 <!--more-->
 
