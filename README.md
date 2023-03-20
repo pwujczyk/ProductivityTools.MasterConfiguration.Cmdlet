@@ -42,7 +42,7 @@ To make setup easy, the module exposes the cmdlet which allows creating a direct
 
 - Create a **ProductivityTools.MasterConfiguration** directory in the Documents of the current user, or in the path provided to the cmdlet
 - Create a file **ProductivityTools.PSMasterConfiguration.json** in the directory if not exists
-- Set environment variables for a **Process** and for **Machine** with the a key **MasterConfigurationPath** which will target the directory described above
+- Set environment variables for a **Process** and for **Machine** with the a key **MasterConfigurationPath** which will target the directory described above - for this step admin rights are required
 
 ## Usage
 
