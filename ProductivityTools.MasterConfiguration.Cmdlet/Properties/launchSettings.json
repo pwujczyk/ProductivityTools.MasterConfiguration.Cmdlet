@@ -2,8 +2,8 @@
   "profiles": {
     "ProductivityTools.MasterConfiguration.Cmdlet": {
       "commandName": "Executable",
-      "executablePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-      "commandLineArgs": "-noexit -command \"import-module D:\\GitHub-3.PublishedToLinkedIn\\ProductivityTools.PSMasterConfiguration\\ProductivityTools.MasterConfiguration.Cmdlet\\bin\\Debug\\netstandard2.0\\ProductivityTools.MasterConfiguration.Cmdlet.dll\""
+      "executablePath": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+      "commandLineArgs": "-noexit -command \"import-module d:\\GitHub\\ProductivityTools.MasterConfiguration.Cmdlet\\ProductivityTools.MasterConfiguration.Cmdlet\\bin\\Debug\\netstandard2.0\\ProductivityTools.MasterConfiguration.Cmdlet.dll\""
     }
   }
 }
